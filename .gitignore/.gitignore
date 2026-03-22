@@ -1,0 +1,175 @@
+# ═══════════════════════════════════════════════════════════════
+# .gitignore — AI Safety Evaluation Platform
+# github.com/sara0079/LLM-Evaluation
+#
+# CRITICAL: This file prevents API keys, credentials and
+# sensitive configuration from being pushed to GitHub.
+# Review carefully before every commit.
+# ═══════════════════════════════════════════════════════════════
+
+
+# ── API KEYS & CREDENTIALS (NEVER commit these) ──────────────
+.env
+.env.*
+.env.local
+.env.production
+.env.development
+*.env
+
+# Config files that might contain real keys
+config.py
+config.json
+secrets.py
+secrets.json
+credentials.json
+api_keys.py
+api_keys.json
+keys.py
+keys.json
+
+# ── PYTHON ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+ENV/
+env.bak/
+venv.bak/
+C:/venvs/          # Windows venv paths
+*/crewai_env/
+*/langchain_env/
+*/autogen_env/
+*/openai_env/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+.eggs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.hypothesis/
+
+# ── NODE / JAVASCRIPT ─────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.npm/
+
+# ── OPERATING SYSTEM ─────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ── IDE & EDITORS ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+*.launch
+.settings/
+
+# ── LOGS & TEMPORARY FILES ───────────────────────────────────
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+logs/
+tmp/
+temp/
+
+# ── PERSONAL / WORKING COPIES ────────────────────────────────
+# Versions with real API keys — keep locally, never push
+*_personal.py
+*_local.py
+*_real.py
+*_prod.py
+*_production.py
+*_with_keys.py
+
+# Local test outputs — push only curated results
+outputs/
+local_results/
+my_results/
+test_output/
+
+# ── EXCEL / OFFICE TEMP FILES ────────────────────────────────
+~$*.xlsx
+~$*.docx
+~$*.pptx
+*.xlsb
+
+# ── JUPYTER NOTEBOOKS (contain outputs with potential keys) ──
+.ipynb_checkpoints/
+# Uncomment below if you don't want to share notebooks
+# *.ipynb
+
+# ── LARGE FILES (use Git LFS instead) ────────────────────────
+*.pdf
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# ── WHAT TO ALWAYS COMMIT ✅ ──────────────────────────────────
+# (These are NOT ignored — always include them)
+#
+# eval-runner/ai_safety_eval_runner_v7.html
+# agent-servers/langchain_agent_server.py      ← with placeholder keys
+# agent-servers/crewai_agent_server_lean.py    ← with placeholder keys
+# agent-servers/autogen_agent_server.py        ← with placeholder keys
+# agent-servers/healthcare_api_agent_server.py ← with placeholder keys
+# test-suites/*.xlsx
+# datasets/safety_datasets_converter.py
+# results/*.xlsx
+# README.md
+# LICENSE
+# .gitignore
+#
+# ⚠️  BEFORE EVERY COMMIT — run this check:
+#     grep -r "gsk_[a-zA-Z0-9]" *.py agent-servers/*.py
+#     grep -r "sk-[a-zA-Z0-9]" *.py agent-servers/*.py
+#     If it returns real keys → replace with placeholder first!
+# ═══════════════════════════════════════════════════════════════
